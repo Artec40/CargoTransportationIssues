@@ -1,0 +1,7 @@
+.app-wrapper {
+    display: grid;
+    grid-template-areas: "h h h" "n rl r";
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 10vh 90vh;
+    font-size: 20px;
+}

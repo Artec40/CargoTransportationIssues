@@ -1,0 +1,7 @@
+.Navbar {
+    grid-area: n;
+    background-color: #6a6a6a;
+    color: white;
+    padding-top: 50px;
+    padding-left: 20px;
+}
