@@ -1,6 +1,7 @@
-import {Body, Controller, Delete, Get, Param, Post} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {IssuesService} from './issues.service';
-import {ReadIssuesDto, ReadIssueDto, CreateIssuesDto} from "./issues.dto";
+import {SaveIssuesDto} from './issues.dto';
+import {Issue} from './issue.interface';
 
 @Controller('issue')
 export class IssuesController {
@@ -8,28 +9,27 @@ export class IssuesController {
     }
 
     @Get()
-    async getIssues(): Promise<ReadIssuesDto> {
-        return {
-            issues: this.issuesService.getIssues() //ReadIssuesDto = {issues: Issue[]}
-        }
+    async getIssues(): Promise<Issue[]> {
+        return this.issuesService.getIssues()
     }
 
     @Get(':number')
-    async getIssue(@Param('number') number): Promise<ReadIssueDto> {
-        return {
-            issue: this.issuesService.getIssue(number)
-        }
+    async getIssue(@Param('number') issueNumber: string): Promise<Issue> {
+        return this.issuesService.getIssue(Number(issueNumber))
     }
 
     @Post()
-    async Create(@Body() createIssueDto: CreateIssuesDto) {
-        this.issuesService.createIssue(createIssueDto.issue)
+    async Create(@Body() saveIssuesDto: SaveIssuesDto) {
+        this.issuesService.createIssue({number: undefined, ...saveIssuesDto})
+    }
+
+    @Put(':number')
+    async update(@Param('number') issueNumber: string, @Body() saveIssuesDto: SaveIssuesDto) {
+        this.issuesService.updateIssue({number: Number(issueNumber), ...saveIssuesDto})
     }
 
     @Delete(':number')
-    remove(@Param('number') number: RemoveIssuesDto) {
-        return {
-            issue: this.issuesService.RemoveIssue(number)
-        }
+    async remove(@Param('number') issueNumber: string) {
+        this.issuesService.removeIssue(Number(issueNumber))
     }
 }

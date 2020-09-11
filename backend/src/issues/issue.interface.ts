@@ -1,5 +1,5 @@
 export interface Issue {
-    number: string
+    number: number
     date: string
     company: string
     carrier: string
