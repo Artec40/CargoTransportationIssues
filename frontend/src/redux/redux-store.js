@@ -1,9 +1,9 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux'
-import requestsReducer from './requests-reducer'
+import issuesReducer from './issues-reducer'
 import thunkMiddleware from 'redux-thunk'
 
 let reducers = combineReducers({
-    requestPage: requestsReducer
+    issuesPage: issuesReducer
 })
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware))

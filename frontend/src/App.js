@@ -5,16 +5,16 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Header from '../src/Header/Header'
 import Navbar from '../src/Navbar/Navbar'
-import Request from '../src/Request/Request'
-import RequestList from '../src/RequestList/RequestList'
+import Issue from './Issue/Issue'
+import IssuesListContainer from './IssuesList/IssuesListContainer'
 
 function App() {
     return (
         <div className="app-wrapper">
             <Header/>
             <Navbar/>
-            <Request/>
-            <RequestList/>
+            <Issue/>
+            <IssuesListContainer/>
         </div>
     )
 }

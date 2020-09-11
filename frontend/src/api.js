@@ -10,8 +10,8 @@ const instance = axios.create({
     }
 })
 
-export const requestsAPI = {
-    getRequests() {
-        return instance.get('requests/')
+export const issuesAPI = {
+    getIssues() {
+        return instance.get('issue/')
     }
 }
