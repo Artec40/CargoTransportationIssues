@@ -1,5 +1,13 @@
-.Issue{
+.Issue {
     grid-area: i;
     padding-top: 50px;
-    text-align: center;
+    text-align: left;
+}
+
+.description {
+    font-weight: bold;
+}
+
+.value {
+    padding-bottom: 40px;
 }

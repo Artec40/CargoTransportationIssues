@@ -13,5 +13,8 @@ const instance = axios.create({
 export const issuesAPI = {
     getIssues() {
         return instance.get('issue/')
+    },
+    getCurrentIssue(id) {
+        return instance.get(`issue/${id}`)
     }
 }

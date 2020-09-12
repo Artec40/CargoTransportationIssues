@@ -1,13 +1,15 @@
 import React from 'react'
 import s from './IssuesList.module.css'
+import { NavLink } from 'react-router-dom'
 
 const IssuesList = ({issues}) => {
 
-    let issuesId = issues.map(issues=> <li>{issues.id}</li>)
+    let issuesId = issues.map(issue => <div><NavLink to={''+ issue.id}>{issue.id}</NavLink></div>)
     return (
         <div className={s.IssuesList}>
-            Номер заявки: {}
-            <ul>{issuesId}</ul>
+            <h1>Номера заявок: </h1>
+            {issuesId}
+            <button>Создать</button>
         </div>
     )
 }
