@@ -12,8 +12,7 @@ const IssuesList = ({issues, isCreateMode, toggleIsCreateMode}) => {
             {issuesId}
             {
                 !isCreateMode &&
-                //todo Нужно что-то придумать с нажатием кнопки со стартовой страницы
-                <NavLink to={'/issue/10001'}>
+                <NavLink to={'/create'}>
                     <button onClick={() => {toggleIsCreateMode(true)}}>Создать</button>
                 </NavLink>
             }

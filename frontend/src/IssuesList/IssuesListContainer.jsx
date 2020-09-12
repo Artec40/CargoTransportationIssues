@@ -19,6 +19,7 @@ class IssuesListContainer extends React.Component {
             }
             {
                 !this.props.isFetching &&
+                this.props.issues &&
                 <IssuesList issues={this.props.issues}
                             isCreateMode={this.props.isCreateMode}
                             toggleIsCreateMode={this.props.toggleIsCreateMode}/>
@@ -36,5 +37,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {getIssues, getIsFetching, toggleIsCreateMode})(IssuesListContainer)
+export default connect(mapStateToProps, {getIssues, toggleIsCreateMode})(IssuesListContainer)
 

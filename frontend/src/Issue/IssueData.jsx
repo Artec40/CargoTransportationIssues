@@ -2,7 +2,7 @@ import React from 'react'
 import s from './Issue.module.css'
 import { NavLink } from 'react-router-dom'
 
-const IssueData = ({id, issueData, deleteCurrentIssue, goToEditMode}) => {
+const IssueData = ({id, issueData, deleteCurrentIssue, startEditMode}) => {
     return (
         <div className={s.Issue}>
             <div className={s.description}>Дата и время получения заявки от клиента:</div>
@@ -18,7 +18,7 @@ const IssueData = ({id, issueData, deleteCurrentIssue, goToEditMode}) => {
             <div className={s.description}>ATI код перевозчика:</div>
             <div className={s.value}>{issueData.ATICode}</div>
             <div>
-                <button onClick={() => {goToEditMode()}}>Редактировать</button>
+                <button onClick={() => {startEditMode()}}>Редактировать</button>
                 <NavLink to={''}>
                     <button onClick={() => {deleteCurrentIssue(id)}}>Удалить</button>
                 </NavLink>

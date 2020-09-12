@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc45250-fba5-47bb-911c-acff532652d3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreator.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreatorContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/issues/issues.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/issues/issues.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Issue/Issue.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Issue/Issue.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Issue/IssueContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Issue/IssueContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Issue/IssueData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Issue/IssueData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Issue/IssueDataForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Issue/IssueEditDataForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/issues-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/issues-reducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,127 +27,98 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Issue.jsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/frontend/src/Issue/Issue.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IssueContainer.jsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueContainer.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IssueData.jsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueData.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IssueEditDataForm.jsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueEditDataForm.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="issues-selector.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/redux/issues-selector.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="34" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IssuesList.jsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="issues-reducer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/redux/issues-reducer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="109">
-                  <caret line="71" selection-start-line="71" selection-end-line="71" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IssuesListContainer.jsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="78" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/api.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="89" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="89" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartIssueCondition.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartIssueCondition.module.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.module.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IssueCreator.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreator.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IssueCreatorContainer.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreatorContainer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IssueEditDataForm.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueEditDataForm.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IssuesList.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="77" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="issues-reducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/redux/issues-reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -181,21 +156,27 @@
         <option value="$PROJECT_DIR$/frontend/src/EmptyIssue/EmptyIssue.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/IssueStatus/EmptyIssue.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.module.css" />
-        <option value="$PROJECT_DIR$/frontend/src/App.js" />
-        <option value="$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/Issue/Issue.module.css" />
         <option value="$PROJECT_DIR$/frontend/src/redux/redux-store.js" />
         <option value="$PROJECT_DIR$/frontend/src/redux/issues-selector.js" />
         <option value="$PROJECT_DIR$/frontend/src/Issue/IssueDataForm.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/IssuesList/IssueCreateDataForm.jsx" />
-        <option value="$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx" />
-        <option value="$PROJECT_DIR$/frontend/src/Issue/IssueEditDataForm.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/api.js" />
         <option value="$PROJECT_DIR$/frontend/src/redux/issues-reducer.js" />
+        <option value="$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/IssueCreateStatus/IssueCreateStatus.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/IssueCreateStatus/IssueCreateStatusContainer.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/Issue/IssueContainer.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/Issue/IssueData.jsx" />
-        <option value="$PROJECT_DIR$/frontend/src/Issue/Issue.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/Issue/Issue.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreatorContainer.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/Issue/IssueEditDataForm.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreator.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/App.js" />
+        <option value="$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.jsx" />
+        <option value="$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.module.css" />
       </list>
     </option>
   </component>
@@ -252,6 +233,13 @@
               <item name="CargoTransportationIssues" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="IssueCreator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CargoTransportationIssues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CargoTransportationIssues" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="IssuesList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,6 +248,13 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CargoTransportationIssues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CargoTransportationIssues" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="StartIssueCondition" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -281,9 +276,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Repositories\CargoTransportationIssues\frontend\src\IssueCreateStatus" />
+      <recent name="C:\Repositories\CargoTransportationIssues\frontend\src" />
       <recent name="C:\Repositories\CargoTransportationIssues\frontend\src\IssuesList" />
       <recent name="C:\Repositories\CargoTransportationIssues\frontend\src\Issue" />
-      <recent name="C:\Repositories\CargoTransportationIssues\frontend\src" />
       <recent name="C:\Repositories\CargoTransportationIssues\frontend\src\RequestList" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -349,12 +345,12 @@
       <workItem from="1599898742858" duration="4827000" />
       <workItem from="1599904381377" duration="3554000" />
       <workItem from="1599909367029" duration="1206000" />
-      <workItem from="1599911064457" duration="11359000" />
+      <workItem from="1599911064457" duration="26723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74654000" />
+    <option name="totallyTimeSpent" value="90018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -364,10 +360,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32897604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32897604" />
@@ -377,7 +374,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,30 +391,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -642,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/dist/issues/issues.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -681,23 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -739,47 +691,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/redux/issues-reducer.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueData.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="374">
+          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueEditDataForm.jsx">
+    <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -788,28 +720,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state relative-caret-position="156">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/Issue/Issue.jsx">
+    <entry file="file://$PROJECT_DIR$/frontend/src/redux/issues-reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="77" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/Issue/IssueEditDataForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreatorContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="89" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/Issue/Issue.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/IssuesList/IssuesList.jsx">
+    <entry file="file://$PROJECT_DIR$/frontend/src/IssueCreator/IssueCreator.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="306">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/StartIssueCondition/StartIssueCondition.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

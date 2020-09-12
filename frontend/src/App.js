@@ -7,7 +7,8 @@ import Header from '../src/Header/Header'
 import Navbar from '../src/Navbar/Navbar'
 import IssueContainer from './Issue/IssueContainer'
 import IssuesListContainer from './IssuesList/IssuesListContainer'
-import IssueStatus from './IssueStatus/IssueStatus'
+import IssueCondition from './IssueCondition/IssueCondition'
+import IssueCreatorContainer from './IssueCreator/IssueCreatorContainer'
 
 function App() {
     return (
@@ -17,7 +18,8 @@ function App() {
             <IssuesListContainer/>
             <Switch>
                 <Route path={'/issue/:issueId?'} render={() => <IssueContainer/>}/>
-                <Route path={'*'} render={() => <IssueStatus issue={'emptyIssue'}/>}/>
+                <Route path={'/create'} render={() => <IssueCreatorContainer/>}/>
+                <Route path={'*'} render={() => <IssueCondition condition={'startApp'}/>}/>
             </Switch>
         </div>
     )

@@ -12,7 +12,7 @@ export class IssuesService {
     getIssue(number: number): Issue {
         let resultIssue: Issue = store.issues.find(issue => issue.number === number)
         if (!resultIssue)
-            throw new HttpException('IssueStatus with this number does not exist', HttpStatus.NOT_FOUND)
+            throw new HttpException('IssueCreator with this number does not exist', HttpStatus.NOT_FOUND)
         return resultIssue
     }
 

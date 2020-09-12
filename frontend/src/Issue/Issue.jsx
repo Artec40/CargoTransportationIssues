@@ -3,10 +3,9 @@ import s from './Issue.module.css'
 import IssueData from './IssueData'
 import IssueEditDataForm from './IssueEditDataForm'
 
-const Issue = ({id, issueData, deleteCurrentIssue, saveCurrentIssue, createIssue, isCreateMode, toggleIsCreateMode}) => {
+const Issue = ({id, issueData, deleteCurrentIssue, saveCurrentIssue}) => {
 
     let [editMode, setEditMode] = useState(false)
-
 
     const onEditSubmit = (formData) => {
         saveCurrentIssue(id, formData).then(() => {
@@ -14,30 +13,18 @@ const Issue = ({id, issueData, deleteCurrentIssue, saveCurrentIssue, createIssue
         })
     }
 
-    const onCreateSubmit = (formData) => {
-        createIssue(formData).then(() => {
-            toggleIsCreateMode(false)
-        })
-    }
-
     return (
         <div className={s.Issue}>
             <h1>Заявка №{id}</h1>
             {
-                !isCreateMode &&
-                (
-                    editMode
-                        ? <IssueEditDataForm initialValues={issueData} onSubmit={onEditSubmit}/>
-                        : <IssueData id={id}
-                                     issueData={issueData}
-                                     deleteCurrentIssue={deleteCurrentIssue}
-                                     goToEditMode={() => {
-                                         setEditMode(true)
-                                     }}/>)
-            }
-            {
-                isCreateMode &&
-                <IssueEditDataForm onSubmit={onCreateSubmit}/>
+                editMode
+                    ? <IssueEditDataForm initialValues={issueData} onSubmit={onEditSubmit}/>
+                    : <IssueData id={id}
+                                 issueData={issueData}
+                                 deleteCurrentIssue={deleteCurrentIssue}
+                                 startEditMode={() => {
+                                     setEditMode(true)
+                                 }}/>
             }
         </div>
     )
