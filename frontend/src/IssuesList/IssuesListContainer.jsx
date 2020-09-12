@@ -1,8 +1,9 @@
 import React from 'react'
 import IssuesList from './IssuesList'
 import { connect } from 'react-redux'
-import { getIssues } from '../../src/redux/issues-reducer'
-import { getIssuesId } from '../../src/redux/issues-selector'
+import { getIssues, toggleIsCreateMode } from '../../src/redux/issues-reducer'
+import { getIssuesId, getIsFetching } from '../../src/redux/issues-selector'
+import Preloader from '../../src/Preloader/Preloader'
 
 class IssuesListContainer extends React.Component {
 
@@ -11,15 +12,29 @@ class IssuesListContainer extends React.Component {
     }
 
     render() {
-        return <IssuesList issues={this.props.issues}/>
+        return <div>
+            {
+                this.props.isFetching &&
+                <Preloader/>
+            }
+            {
+                !this.props.isFetching &&
+                <IssuesList issues={this.props.issues}
+                            isCreateMode={this.props.isCreateMode}
+                            toggleIsCreateMode={this.props.toggleIsCreateMode}/>
+            }
+        </div>
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        issues: getIssuesId(state)
+        issues: getIssuesId(state),
+        isFetching: getIsFetching(state),
+        toggleIsCreateMode: toggleIsCreateMode(state),
+        isCreateMode: state.issuesPage.isCreateMode
     }
 }
 
-export default connect(mapStateToProps, {getIssues})(IssuesListContainer)
+export default connect(mapStateToProps, {getIssues, getIsFetching, toggleIsCreateMode})(IssuesListContainer)
 

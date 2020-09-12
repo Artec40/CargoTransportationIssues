@@ -22,5 +22,8 @@ export const issuesAPI = {
     },
     changeIssue(id, issue) {
         return instance.put(`issue/${id}`, issue)
+    },
+    createIssue(issue) {
+        return instance.post('issue/', issue)
     }
 }

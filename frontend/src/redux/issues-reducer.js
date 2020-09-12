@@ -3,11 +3,13 @@ import { issuesAPI } from '../api'
 const SET_ISSUES = 'SET_ISSUES'
 const SET_CURRENT_ISSUE = 'SET_CURRENT_ISSUE'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
+const TOGGLE_IS_CREATE_MODE = 'TOGGLE_IS_CREATE_MODE'
 
 let initialState = {
     issues: [],
     currentIssue: {},
     isFetching: false,
+    isCreateMode: false
 }
 
 const issuesReducer = (state = initialState, action) => {
@@ -30,6 +32,12 @@ const issuesReducer = (state = initialState, action) => {
                 isFetching: action.isFetching
             }
         }
+        case TOGGLE_IS_CREATE_MODE: {
+            return {
+                ...state,
+                isCreateMode: action.isCreateMode
+            }
+        }
         default:
             return state
     }
@@ -43,6 +51,9 @@ export const setCurrentIssue = (currentIssue) => ({
 })
 export const toggleIsFetching = (isFetching) => ({
     type: TOGGLE_IS_FETCHING, isFetching
+})
+export const toggleIsCreateMode = (isCreateMode) => ({
+    type: TOGGLE_IS_CREATE_MODE, isCreateMode
 })
 
 export const getIssues = () => async (dispatch) => {
@@ -70,6 +81,13 @@ export const saveCurrentIssue = (id, issue) => async (dispatch) => {
     dispatch(toggleIsFetching(true))
     await issuesAPI.changeIssue(id, issue)
     dispatch(getCurrentIssue(id))
+    dispatch(toggleIsFetching(false))
+}
+
+export const createIssue = (issue) => async (dispatch) => {
+    dispatch(toggleIsFetching(true))
+    await issuesAPI.createIssue(issue)
+    dispatch(getIssues())
     dispatch(toggleIsFetching(false))
 }
 
