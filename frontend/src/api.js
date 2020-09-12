@@ -14,7 +14,10 @@ export const issuesAPI = {
     getIssues() {
         return instance.get('issue/')
     },
-    getCurrentIssue(id) {
+    getIssue(id) {
         return instance.get(`issue/${id}`)
+    },
+    deleteIssue(id) {
+        return instance.delete(`issue/${id}`)
     }
 }

@@ -51,10 +51,17 @@ export const getIssues = () => async (dispatch) => {
     dispatch(setIssues(request.data))
     dispatch(toggleIsFetching(false))
 }
+
 export const getCurrentIssue = (id) => async (dispatch) => {
     dispatch(toggleIsFetching(true))
-    const request = await issuesAPI.getCurrentIssue(id)
+    const request = await issuesAPI.getIssue(id)
     dispatch(setCurrentIssue(request.data))
+    dispatch(toggleIsFetching(false))
+}
+export const deleteCurrentIssue = (id) => async (dispatch) => {
+    dispatch(toggleIsFetching(true))
+    await issuesAPI.deleteIssue(id)
+    dispatch(getIssues())
     dispatch(toggleIsFetching(false))
 }
 

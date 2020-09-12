@@ -1,7 +1,9 @@
 import React from 'react'
 import s from './Issue.module.css'
+import { NavLink } from 'react-router-dom'
 
 const Issue = (props) => {
+
     return (
         <div className={s.Issue}>
             <h1>Заявка №{props.id}</h1>
@@ -19,7 +21,9 @@ const Issue = (props) => {
             <div className={s.value}>{props.ATICode}</div>
             <div>
                 <button>Редактировать</button>
-                <button>Удалить</button>
+                <NavLink to={''}>
+                    <button onClick={() => {props.deleteCurrentIssue(props.id)}}>Удалить</button>
+                </NavLink>
             </div>
         </div>
     )

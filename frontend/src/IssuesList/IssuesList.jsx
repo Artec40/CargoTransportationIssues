@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const IssuesList = ({issues}) => {
 
-    let issuesId = issues.map(issue => <div><NavLink to={''+ issue.id}>{issue.id}</NavLink></div>)
+    let issuesId = issues.map(issue => <div><NavLink to={'/issue/'+ issue.id}>{issue.id}</NavLink></div>)
     return (
         <div className={s.IssuesList}>
             <h1>Номера заявок: </h1>

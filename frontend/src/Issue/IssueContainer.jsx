@@ -1,7 +1,7 @@
 import React from 'react'
 import Issue from './Issue'
 import { connect } from 'react-redux'
-import { getCurrentIssue } from '../../src/redux/issues-reducer'
+import { getCurrentIssue, deleteCurrentIssue } from '../../src/redux/issues-reducer'
 import { getIssue, getIsFetching } from '../../src/redux/issues-selector'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
@@ -39,6 +39,7 @@ class IssueContainer extends React.Component {
                        comments={this.props.issue.comments}
                        date={this.props.issue.date}
                        phone={this.props.issue.phone}
+                       deleteCurrentIssue={this.props.deleteCurrentIssue}
                 />
             }
         </div>
@@ -53,7 +54,7 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {getCurrentIssue}),
+    connect(mapStateToProps, {getCurrentIssue, deleteCurrentIssue}),
     withRouter)
 (IssueContainer)
 
