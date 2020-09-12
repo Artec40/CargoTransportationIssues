@@ -19,5 +19,8 @@ export const issuesAPI = {
     },
     deleteIssue(id) {
         return instance.delete(`issue/${id}`)
+    },
+    changeIssue(id, issue) {
+        return instance.put(`issue/${id}`, issue)
     }
 }

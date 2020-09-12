@@ -7,7 +7,7 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 let initialState = {
     issues: [],
     currentIssue: {},
-    isFetching: false
+    isFetching: false,
 }
 
 const issuesReducer = (state = initialState, action) => {
@@ -58,10 +58,18 @@ export const getCurrentIssue = (id) => async (dispatch) => {
     dispatch(setCurrentIssue(request.data))
     dispatch(toggleIsFetching(false))
 }
+
 export const deleteCurrentIssue = (id) => async (dispatch) => {
     dispatch(toggleIsFetching(true))
     await issuesAPI.deleteIssue(id)
     dispatch(getIssues())
+    dispatch(toggleIsFetching(false))
+}
+
+export const saveCurrentIssue = (id, issue) => async (dispatch) => {
+    dispatch(toggleIsFetching(true))
+    await issuesAPI.changeIssue(id, issue)
+    dispatch(getCurrentIssue(id))
     dispatch(toggleIsFetching(false))
 }
 

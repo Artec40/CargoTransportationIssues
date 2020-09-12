@@ -1,8 +1,8 @@
 import React from 'react'
 import Issue from './Issue'
 import { connect } from 'react-redux'
-import { getCurrentIssue, deleteCurrentIssue } from '../../src/redux/issues-reducer'
-import { getIssue, getIsFetching } from '../../src/redux/issues-selector'
+import { getCurrentIssue, deleteCurrentIssue, saveCurrentIssue } from '../../src/redux/issues-reducer'
+import { getIssue, getIssueId, getIsFetching } from '../../src/redux/issues-selector'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import Preloader from '../../src/Preloader/Preloader'
@@ -32,14 +32,11 @@ class IssueContainer extends React.Component {
             {
                 !this.props.isFetching &&
                 this.props.issue &&
-                <Issue id={this.props.issue.id}
-                       company={this.props.issue.company}
-                       ATICode={this.props.issue.ATICode}
-                       carrier={this.props.issue.carrier}
-                       comments={this.props.issue.comments}
-                       date={this.props.issue.date}
-                       phone={this.props.issue.phone}
-                       deleteCurrentIssue={this.props.deleteCurrentIssue}
+                <Issue
+                    id={this.props.issueId}
+                    issueData={this.props.issue}
+                    deleteCurrentIssue={this.props.deleteCurrentIssue}
+                    saveCurrentIssue={this.props.saveCurrentIssue}
                 />
             }
         </div>
@@ -49,12 +46,13 @@ class IssueContainer extends React.Component {
 const mapStateToProps = (state) => {
     return {
         issue: getIssue(state),
+        issueId: getIssueId(state).id,
         isFetching: getIsFetching(state)
     }
 }
 
 export default compose(
-    connect(mapStateToProps, {getCurrentIssue, deleteCurrentIssue}),
+    connect(mapStateToProps, {getCurrentIssue, deleteCurrentIssue, saveCurrentIssue}),
     withRouter)
 (IssueContainer)
 

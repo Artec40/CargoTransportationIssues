@@ -1,30 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './Issue.module.css'
-import { NavLink } from 'react-router-dom'
+import IssueData from './IssueData'
+import IssueDataForm from './IssueDataForm'
 
-const Issue = (props) => {
+const Issue = ({id, issueData, deleteCurrentIssue, saveCurrentIssue}) => {
+
+    let [editMode, setEditMode] = useState(false)
+
+    const onSubmit = (formData) => {
+        saveCurrentIssue(id, formData).then(() => {
+            setEditMode(false)
+        })
+    }
 
     return (
         <div className={s.Issue}>
-            <h1>Заявка №{props.id}</h1>
-            <div className={s.description}>Дата и время получения заявки от клиента:</div>
-            <div className={s.value}>{props.date}</div>
-            <div className={s.description}>Название фирмы клиента:</div>
-            <div className={s.value}>{props.company}</div>
-            <div className={s.description}>ИО перевозчика:</div>
-            <div className={s.value}>{props.carrier}</div>
-            <div className={s.description}>Контактный телефон перевозчика:</div>
-            <div className={s.value}>{props.phone}</div>
-            <div className={s.description}>Коментарии:</div>
-            <div className={s.value}>{props.comments}</div>
-            <div className={s.description}>ATI код перевозчика</div>
-            <div className={s.value}>{props.ATICode}</div>
-            <div>
-                <button>Редактировать</button>
-                <NavLink to={''}>
-                    <button onClick={() => {props.deleteCurrentIssue(props.id)}}>Удалить</button>
-                </NavLink>
-            </div>
+            <h1>Заявка №{id}</h1>
+
+            {editMode
+                ? <IssueDataForm initialValues={issueData} onSubmit={onSubmit}/>
+                : <IssueData id={id}
+                             issueData={issueData}
+                             deleteCurrentIssue={deleteCurrentIssue}
+                             goToEditMode={() => {
+                                 setEditMode(true)
+                             }}/>
+            }
         </div>
     )
 }
