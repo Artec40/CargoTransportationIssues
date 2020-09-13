@@ -136,6 +136,7 @@ export const saveCurrentIssue = (id, issue) => async (dispatch) => {
     dispatch(toggleIsFetching(true))
     await issuesAPI.changeIssue(id, issue)
     dispatch(getCurrentIssue(id))
+    dispatch(getFilterData())
     dispatch(toggleIsFetching(false))
 }
 
@@ -143,6 +144,7 @@ export const createIssue = (issue) => async (dispatch) => {
     dispatch(toggleIsFetching(true))
     await issuesAPI.createIssue(issue)
     dispatch(getIssues())
+    dispatch(getFilterData())
     dispatch(toggleIsFetching(false))
 }
 

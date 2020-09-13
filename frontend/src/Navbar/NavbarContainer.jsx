@@ -1,8 +1,16 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { connect } from 'react-redux'
-import { getCurrentIssue, getIssuesByFilter, setCompanyFilter, setCarrierFilter, setATICodeFilter, setRequiredIssue, getIssuesBySearch } from '../../src/redux/issues-reducer'
-import { getIssuesId, getAllATICodes, getAllCarriers, getAllCompanies } from '../../src/redux/issues-selector'
+import {
+    getIssuesByFilter,
+    setCompanyFilter,
+    setCarrierFilter,
+    setATICodeFilter,
+    setRequiredIssue,
+    getIssuesBySearch,
+    getFilterData
+} from '../../src/redux/issues-reducer'
+import { getAllATICodes, getAllCarriers, getAllCompanies} from '../../src/redux/issues-selector'
 import Preloader from '../../src/Preloader/Preloader'
 
 class NavbarContainer extends React.Component {
@@ -14,13 +22,10 @@ class NavbarContainer extends React.Component {
                 <Preloader/>}
             {
                 !this.props.isFetching &&
-                this.props.issuesId &&
                 this.props.companies &&
                 this.props.carriers &&
                 this.props.ATICodes &&
                 <Navbar
-                    issuesId={this.props.issuesId}
-                    getCurrentIssue={this.props.getCurrentIssue}
                     companies={this.props.companies}
                     carriers={this.props.carriers}
                     ATICodes={this.props.ATICodes}
@@ -41,7 +46,6 @@ class NavbarContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        issuesId: getIssuesId(state),
         companies: getAllCompanies(state),
         carriers: getAllCarriers(state),
         ATICodes: getAllATICodes(state),
@@ -52,5 +56,13 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {getCurrentIssue, getIssuesByFilter, setCompanyFilter, setCarrierFilter, setATICodeFilter, setRequiredIssue, getIssuesBySearch})(NavbarContainer)
+export default connect(mapStateToProps, {
+    getIssuesByFilter,
+    setCompanyFilter,
+    setCarrierFilter,
+    setATICodeFilter,
+    setRequiredIssue,
+    getIssuesBySearch,
+    getFilterData
+})(NavbarContainer)
 

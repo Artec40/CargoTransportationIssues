@@ -1,7 +1,11 @@
 import React from 'react'
 
 
-const FilterIssueForm = ({companies, carriers, ATICodes, getIssuesByFilter, setCompanyFilter, companyFilter, setCarrierFilter, carrierFilter, setATICodeFilter, ATICodeFilter}) => {
+const FilterIssueForm = ({
+                             companies, carriers, ATICodes, getIssuesByFilter,
+                             setCompanyFilter, companyFilter, setCarrierFilter,
+                             carrierFilter, setATICodeFilter, ATICodeFilter
+                         }) => {
 
     let companiesOptions = companies.map(company => <option value={company}>{company}</option>)
     let carriersOptions = carriers.map(carrier => <option value={carrier}>{carrier}</option>)
@@ -50,7 +54,6 @@ const FilterIssueForm = ({companies, carriers, ATICodes, getIssuesByFilter, setC
                     {ATICodesOptions}
                 </select>
             </div>
-            <div>Поиск заявки</div>
             <button onClick={startFilterIssues}>Поиск по фильтру
             </button>
         </div>
