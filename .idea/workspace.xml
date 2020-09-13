@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc45250-fba5-47bb-911c-acff532652d3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/Preloader/Preloader.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/issues/issues.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/issues/issues.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Navbar/FilterIssueForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Navbar/FilterIssueForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Navbar/Navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Navbar/SearchIssueForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Navbar/SearchIssueForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Preloader/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Preloader/Preloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/ATICodes/aticodes.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/ATICodes/aticodes.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/carriers/carriers.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/carriers/carriers.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/companies/companies.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/companies/companies.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/issues/issues.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/issues/issues.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/backend/src/issues/issues.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -53,11 +53,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issues-reducer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="issues-reducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/redux/issues-reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="companies.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/companies/companies.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carriers.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/carriers/carriers.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aticodes.controller.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/src/ATICodes/aticodes.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/Navbar/SearchIssueForm.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -74,20 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Navbar.module.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/Navbar/Navbar.module.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="issues.controller.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/issues/issues.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            <state relative-caret-position="34">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -108,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/redux/redux-store.js" />
         <option value="$PROJECT_DIR$/frontend/src/Issue/IssueDataForm.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/IssuesList/IssueCreateDataForm.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/IssueStatus/IssueStatus.jsx" />
@@ -134,11 +169,8 @@
         <option value="$PROJECT_DIR$/backend/src/filter/filter.service.ts" />
         <option value="$PROJECT_DIR$/backend/src/filter/filter.controller.ts" />
         <option value="$PROJECT_DIR$/backend/src/companies/companies.service.ts" />
-        <option value="$PROJECT_DIR$/backend/src/carriers/carriers.controller.ts" />
         <option value="$PROJECT_DIR$/backend/src/carriers/carriers.service.ts" />
         <option value="$PROJECT_DIR$/backend/src/ATICodes/aticodes.service.ts" />
-        <option value="$PROJECT_DIR$/backend/src/ATICodes/aticodes.controller.ts" />
-        <option value="$PROJECT_DIR$/backend/src/companies/companies.controller.ts" />
         <option value="$PROJECT_DIR$/backend/src/app.module.ts" />
         <option value="$PROJECT_DIR$/frontend/src/redux/issues-selector.js" />
         <option value="$PROJECT_DIR$/frontend/src/App.css" />
@@ -148,7 +180,6 @@
         <option value="$PROJECT_DIR$/frontend/src/IssuesList/IssuesListContainer.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/redux/issues-reducer.js" />
         <option value="$PROJECT_DIR$/frontend/src/api.js" />
-        <option value="$PROJECT_DIR$/backend/src/issues/issues.controller.ts" />
         <option value="$PROJECT_DIR$/frontend/src/Navbar/NavbarContainer.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/Issue/IssueData.jsx" />
         <option value="$PROJECT_DIR$/frontend/src/Preloader/Preloader.js" />
@@ -159,6 +190,11 @@
         <option value="$PROJECT_DIR$/frontend/src/Navbar/Navbar.module.css" />
         <option value="$PROJECT_DIR$/backend/src/issues/issues.service.ts" />
         <option value="$PROJECT_DIR$/frontend/src/Navbar/FilterIssueForm.jsx" />
+        <option value="$PROJECT_DIR$/backend/src/issues/issues.controller.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main.ts" />
+        <option value="$PROJECT_DIR$/backend/src/companies/companies.controller.ts" />
+        <option value="$PROJECT_DIR$/backend/src/carriers/carriers.controller.ts" />
+        <option value="$PROJECT_DIR$/backend/src/ATICodes/aticodes.controller.ts" />
       </list>
     </option>
   </component>
@@ -202,6 +238,27 @@
               <item name="CargoTransportationIssues" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CargoTransportationIssues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CargoTransportationIssues" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ATICodes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CargoTransportationIssues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CargoTransportationIssues" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="carriers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CargoTransportationIssues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CargoTransportationIssues" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="companies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CargoTransportationIssues" type="b2602c69:ProjectViewProjectNode" />
@@ -301,12 +358,12 @@
       <workItem from="1599898742858" duration="4827000" />
       <workItem from="1599904381377" duration="3554000" />
       <workItem from="1599909367029" duration="1206000" />
-      <workItem from="1599911064457" duration="63003000" />
+      <workItem from="1599911064457" duration="64435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126298000" />
+    <option name="totallyTimeSpent" value="127730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -516,16 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/ATICodes/aticodes.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -569,30 +616,6 @@
           <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/ATICodes/aticodes.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/carriers/carriers.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/companies/companies.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -743,28 +766,21 @@
     <entry file="file://$PROJECT_DIR$/frontend/src/Navbar/Navbar.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/issues/issues.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/issues/issues.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/Navbar/SearchIssueForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -790,8 +806,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/redux/issues-reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="136">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/issues/issues.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/companies/companies.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/carriers/carriers.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/ATICodes/aticodes.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

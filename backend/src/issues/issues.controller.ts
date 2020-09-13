@@ -2,7 +2,9 @@ import {Body, Controller, Delete, Get, Param, Post, Put, Query} from '@nestjs/co
 import {IssuesService} from './issues.service';
 import {SaveIssuesDto} from './issues.dto';
 import {Issue} from './issue.interface';
+import {ApiTags} from "@nestjs/swagger";
 
+@ApiTags('issue')
 @Controller('issue')
 export class IssuesController {
     constructor(private readonly issuesService: IssuesService) {
