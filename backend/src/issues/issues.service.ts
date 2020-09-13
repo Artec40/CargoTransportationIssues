@@ -1,18 +1,25 @@
-import {HttpException, HttpStatus, Injectable} from '@nestjs/common';
+import {HttpException, HttpStatus, Injectable, Query} from '@nestjs/common';
 import {Issue} from './issue.interface';
-import {store} from "./store";
+import {store} from "../store";
 
 @Injectable()
 export class IssuesService {
 
-    getIssues(): Issue[] {
-        return store.issues
+    getIssues(company: string,
+              carrier: string,
+              ATICode: string): Issue[] {
+        let resultIssue: Issue[] =
+            store.issues.filter(issue =>
+                 (!company || issue.company === company) &&
+                (!carrier || issue.carrier === carrier) &&
+                (!ATICode || issue.ATICode === ATICode))
+        return resultIssue
     }
 
     getIssue(number: number): Issue {
         let resultIssue: Issue = store.issues.find(issue => issue.number === number)
         if (!resultIssue)
-            throw new HttpException('IssueCreator with this number does not exist', HttpStatus.NOT_FOUND)
+            throw new HttpException('Issue with this number does not exist', HttpStatus.NOT_FOUND)
         return resultIssue
     }
 

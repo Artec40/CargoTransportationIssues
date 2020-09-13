@@ -1,4 +1,4 @@
-import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put, Query} from '@nestjs/common';
 import {IssuesService} from './issues.service';
 import {SaveIssuesDto} from './issues.dto';
 import {Issue} from './issue.interface';
@@ -9,8 +9,14 @@ export class IssuesController {
     }
 
     @Get()
-    async getIssues(): Promise<Issue[]> {
-        return this.issuesService.getIssues()
+    async getIssues(@Query('company') company: string,
+                    @Query('carrier') carrier: string,
+                    @Query('ATICode') ATICode: string): Promise<Issue[]> {
+        return this.issuesService.getIssues(
+           company ? decodeURI(company) : undefined,
+            carrier ? decodeURI(carrier) : undefined,
+            ATICode ? decodeURI(ATICode) : undefined
+        )
     }
 
     @Get(':number')

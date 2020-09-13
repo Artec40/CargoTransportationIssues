@@ -14,6 +14,9 @@ export const issuesAPI = {
     getIssues() {
         return instance.get('issue/')
     },
+    getIssuesByFilter(company, carrier, ATICode) {
+        return instance.get(`issue?company=${company}&carrier=${carrier}&ATICode=${ATICode}`)
+    },
     getIssue(id) {
         return instance.get(`issue/${id}`)
     },
@@ -25,5 +28,14 @@ export const issuesAPI = {
     },
     createIssue(issue) {
         return instance.post('issue/', issue)
+    },
+    getAllCompanies(){
+        return instance.get('company/')
+    },
+    getAllCarriers(){
+        return instance.get('carrier/')
+    },
+    getAllATICodes(){
+        return instance.get('ATICode/')
     }
 }

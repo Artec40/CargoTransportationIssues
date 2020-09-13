@@ -4,7 +4,7 @@ import store from './redux/redux-store'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Header from '../src/Header/Header'
-import Navbar from '../src/Navbar/Navbar'
+import NavbarContainer from './Navbar/NavbarContainer'
 import IssueContainer from './Issue/IssueContainer'
 import IssuesListContainer from './IssuesList/IssuesListContainer'
 import IssueCondition from './IssueCondition/IssueCondition'
@@ -14,7 +14,7 @@ function App() {
     return (
         <div className="app-wrapper">
             <Header/>
-            <Navbar/>
+            <NavbarContainer/>
             <IssuesListContainer/>
             <Switch>
                 <Route path={'/issue/:issueId?'} render={() => <IssueContainer/>}/>
