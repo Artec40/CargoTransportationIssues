@@ -11,9 +11,8 @@ export class IssuesService {
               ATICode: string): Issue[] {
         let resultIssue: Issue[] =
             store.issues.filter(issue =>
-                                (!id || issue.number === Number(id)) &&
-/*
-                (!id || String(issue.number).match(id)[0] !== null) &&*/
+/*                                (!id || issue.number === Number(id)) &&*/
+                (!id || String(issue.number).includes(id)) &&
                 (!company || issue.company === company) &&
                 (!carrier || issue.carrier === carrier) &&
                 (!ATICode || issue.ATICode === ATICode))

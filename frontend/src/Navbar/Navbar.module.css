@@ -4,4 +4,19 @@
     color: white;
     padding-top: 50px;
     padding-left: 20px;
+    padding-right: 20px;
+}
+.Navbar select{
+    width: 250px;
+}
+
+.Navbar button{
+    width:250px;
+}
+
+.Navbar input{
+    width:242px;
+}
+.SearchIssueForm{
+    margin-top:100px;
 }

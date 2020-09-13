@@ -13,35 +13,40 @@ const FilterIssueForm = ({companies, carriers, ATICodes, getIssuesByFilter, setC
 
     return (
         <div>
-            <div>Фильтр заявок</div>
+            <div><b>Фильтр заявок</b></div>
             <div>
                 по фирме:
+            </div>
+            <div>
                 <select defaultValue={companyFilter}
                         onChange={(e) => {
                             setCompanyFilter(e.target.value)
                         }}>
-
-                    <option value={''}></option>
+                    <option value={''}>Выберите значение</option>
                     {companiesOptions}
                 </select>
             </div>
             <div>
                 по перевозчику:
+            </div>
+            <div>
                 <select defaultValue={carrierFilter}
                         onChange={(e) => {
                             setCarrierFilter(e.target.value)
                         }}>
-                    <option value={''}></option>
+                    <option value={''}>Выберите значение</option>
                     {carriersOptions}
                 </select>
             </div>
             <div>
                 по ATI коду:
+            </div>
+            <div>
                 <select defaultValue={ATICodeFilter}
                         onChange={(e) => {
                             setATICodeFilter(e.target.value)
                         }}>
-                    <option value={''}></option>
+                    <option value={''}>Выберите значение</option>
                     {ATICodesOptions}
                 </select>
             </div>
