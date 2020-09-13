@@ -4,18 +4,21 @@ import { connect } from 'react-redux'
 import {
     getCurrentIssue,
     deleteCurrentIssue,
-    saveCurrentIssue
+    saveCurrentIssue,
+    toggleIsCreateMode
 } from '../../src/redux/issues-reducer'
 import { getIssue, getIssueId, getIsFetching } from '../../src/redux/issues-selector'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import Preloader from '../../src/Preloader/Preloader'
 
+
 class IssueContainer extends React.Component {
 
     refreshIssue() {
         let issueId = this.props.match.params.issueId
         this.props.getCurrentIssue(issueId)
+        if (this.props.isCreateMode) this.props.toggleIsCreateMode()
     }
 
     componentDidMount() {
@@ -52,11 +55,12 @@ const mapStateToProps = (state) => {
         issue: getIssue(state),
         issueId: getIssueId(state).id,
         isFetching: getIsFetching(state),
+        isCreateMode: state.issuesPage.isCreateMode
     }
 }
 
 export default compose(
-    connect(mapStateToProps, {getCurrentIssue, deleteCurrentIssue, saveCurrentIssue}),
+    connect(mapStateToProps, {getCurrentIssue, deleteCurrentIssue, saveCurrentIssue, toggleIsCreateMode}),
     withRouter)
 (IssueContainer)
 
