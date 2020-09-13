@@ -16,7 +16,9 @@ const IssueData = ({id, issueData, deleteCurrentIssue, startEditMode}) => {
             <div className={s.description}>Коментарии:</div>
             <div className={s.value}>{issueData.comments}</div>
             <div className={s.description}>ATI код перевозчика:</div>
-            <div className={s.value}>{issueData.ATICode}</div>
+            <a href={`https://ati.su/firms/${issueData.ATICode}/info`}>
+                <div className={s.value}>{issueData.ATICode}</div>
+            </a>
             <div>
                 <button onClick={() => {startEditMode()}}>Редактировать</button>
                 <NavLink to={''}>

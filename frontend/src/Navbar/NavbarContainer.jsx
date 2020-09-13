@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { connect } from 'react-redux'
-import { getCurrentIssue, getIssuesByFilter, setCompanyFilter, setCarrierFilter, setATICodeFilter } from '../../src/redux/issues-reducer'
+import { getCurrentIssue, getIssuesByFilter, setCompanyFilter, setCarrierFilter, setATICodeFilter, setRequiredIssue, getIssuesBySearch } from '../../src/redux/issues-reducer'
 import { getIssuesId, getAllATICodes, getAllCarriers, getAllCompanies } from '../../src/redux/issues-selector'
 import Preloader from '../../src/Preloader/Preloader'
 
@@ -31,7 +31,8 @@ class NavbarContainer extends React.Component {
                     companyFilter={this.props.companyFilter}
                     carrierFilter={this.props.carrierFilter}
                     ATICodeFilter={this.props.ATICodeFilter}
-
+                    setRequiredIssue={this.props.setRequiredIssue}
+                    getIssuesBySearch={this.props.getIssuesBySearch}
                 />
             }
         </>
@@ -46,9 +47,10 @@ const mapStateToProps = (state) => {
         ATICodes: getAllATICodes(state),
         companyFilter: state.issuesPage.companyFilter,
         carrierFilter: state.issuesPage.carrierFilter,
-        ATICodeFilter: state.issuesPage.ATICodeFilter
+        ATICodeFilter: state.issuesPage.ATICodeFilter,
+        requiredIssue: state.issuesPage.requiredIssue
     }
 }
 
-export default connect(mapStateToProps, {getCurrentIssue, getIssuesByFilter, setCompanyFilter, setCarrierFilter, setATICodeFilter})(NavbarContainer)
+export default connect(mapStateToProps, {getCurrentIssue, getIssuesByFilter, setCompanyFilter, setCarrierFilter, setATICodeFilter, setRequiredIssue, getIssuesBySearch})(NavbarContainer)
 

@@ -20,6 +20,7 @@ const FilterIssueForm = ({companies, carriers, ATICodes, getIssuesByFilter, setC
                         onChange={(e) => {
                             setCompanyFilter(e.target.value)
                         }}>
+
                     <option value={''}></option>
                     {companiesOptions}
                 </select>

@@ -8,6 +8,7 @@ const SET_FILTER_DATA = 'SET_FILTER_DATA'
 const SET_COMPANY_FILTER = 'SET_COMPANY_FILTER'
 const SET_CARRIER_FILTER = 'SET_CARRIER_FILTER'
 const SET_ATI_CODE_FILTER = 'SET_ATI_CODE_FILTER'
+const SET_REQUIRED_ISSUE = 'SET_REQUIRED_ISSUE'
 
 let initialState = {
     issues: [],
@@ -17,7 +18,8 @@ let initialState = {
     filterData: {},
     companyFilter: '',
     carrierFilter: '',
-    ATICodeFilter: ''
+    ATICodeFilter: '',
+    requiredIssue: ''
 }
 
 const issuesReducer = (state = initialState, action) => {
@@ -70,6 +72,12 @@ const issuesReducer = (state = initialState, action) => {
                 ATICodeFilter: action.ATICode
             }
         }
+        case SET_REQUIRED_ISSUE: {
+            return {
+                ...state,
+                requiredIssue: action.requiredIssue
+            }
+        }
         default:
             return state
     }
@@ -86,6 +94,9 @@ export const setCarrierFilter = (carrier) => ({
 })
 export const setATICodeFilter = (ATICode) => ({
     type: SET_ATI_CODE_FILTER, ATICode
+})
+export const setRequiredIssue = (requiredIssue) => ({
+    type: SET_ATI_CODE_FILTER, requiredIssue
 })
 export const setCurrentIssue = (currentIssue) => ({
     type: SET_CURRENT_ISSUE, currentIssue
@@ -138,6 +149,13 @@ export const createIssue = (issue) => async (dispatch) => {
 export const getIssuesByFilter = (company, carrier, ATICode) => async (dispatch) => {
     dispatch(toggleIsFetching(true))
     const request = await issuesAPI.getIssuesByFilter(company, carrier, ATICode)
+    dispatch(setIssues(request.data))
+    dispatch(toggleIsFetching(false))
+}
+
+export const getIssuesBySearch = (issueId) => async (dispatch) => {
+    dispatch(toggleIsFetching(true))
+    const request = await issuesAPI.getIssuesBySearch(issueId)
     dispatch(setIssues(request.data))
     dispatch(toggleIsFetching(false))
 }

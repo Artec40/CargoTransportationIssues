@@ -5,12 +5,16 @@ import {store} from "../store";
 @Injectable()
 export class IssuesService {
 
-    getIssues(company: string,
+    getIssues(id: string,
+              company: string,
               carrier: string,
               ATICode: string): Issue[] {
         let resultIssue: Issue[] =
             store.issues.filter(issue =>
-                 (!company || issue.company === company) &&
+                                (!id || issue.number === Number(id)) &&
+/*
+                (!id || String(issue.number).match(id)[0] !== null) &&*/
+                (!company || issue.company === company) &&
                 (!carrier || issue.carrier === carrier) &&
                 (!ATICode || issue.ATICode === ATICode))
         return resultIssue

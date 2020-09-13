@@ -9,11 +9,13 @@ export class IssuesController {
     }
 
     @Get()
-    async getIssues(@Query('company') company: string,
+    async getIssues(@Query('id') id: string,
+                    @Query('company') company: string,
                     @Query('carrier') carrier: string,
                     @Query('ATICode') ATICode: string): Promise<Issue[]> {
         return this.issuesService.getIssues(
-           company ? decodeURI(company) : undefined,
+            id ? decodeURI(id) : undefined,
+            company ? decodeURI(company) : undefined,
             carrier ? decodeURI(carrier) : undefined,
             ATICode ? decodeURI(ATICode) : undefined
         )
