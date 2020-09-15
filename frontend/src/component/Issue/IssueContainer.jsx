@@ -4,13 +4,13 @@ import { connect } from 'react-redux'
 import {
     getCurrentIssue,
     deleteCurrentIssue,
-    saveCurrentIssue,
-    toggleIsCreateMode
-} from '../../src/redux/issues-reducer'
-import { getIssue, getIssueId, getIsFetching } from '../../src/redux/issues-selector'
+    saveCurrentIssue
+} from '../../redux/issues-reducer'
+import { getIssue, getIssueId, getIsFetching } from '../../redux/issues-selector'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
-import Preloader from '../../src/Preloader/Preloader'
+import Preloader from '../Preloader/Preloader'
+import { toggleIsCreateMode } from '../../redux/issues-action'
 
 
 class IssueContainer extends React.Component {
@@ -26,7 +26,7 @@ class IssueContainer extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.match.params.issueId != prevProps.match.params.issueId) {
+        if (this.props.match.params.issueId !== prevProps.match.params.issueId) {
             this.refreshIssue()
         }
     }

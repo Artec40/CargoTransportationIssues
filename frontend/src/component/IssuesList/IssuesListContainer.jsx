@@ -1,15 +1,15 @@
 import React from 'react'
 import IssuesList from './IssuesList'
 import { connect } from 'react-redux'
-import { getIssues, toggleIsCreateMode,getFilterData } from '../../src/redux/issues-reducer'
-import { getIssuesId, getIsFetching } from '../../src/redux/issues-selector'
-import Preloader from '../../src/Preloader/Preloader'
+import { getIssues } from '../../redux/issues-reducer'
+import { getIssuesId, getIsFetching } from '../../redux/issues-selector'
+import Preloader from '../Preloader/Preloader'
+import { toggleIsCreateMode } from '../../redux/issues-action'
 
 class IssuesListContainer extends React.Component {
 
     componentDidMount() {
         this.props.getIssues()
-        this.props.getFilterData()
     }
 
     render() {
@@ -38,5 +38,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {getIssues, getFilterData, toggleIsCreateMode})(IssuesListContainer)
+export default connect(mapStateToProps, {getIssues, toggleIsCreateMode})(IssuesListContainer)
 

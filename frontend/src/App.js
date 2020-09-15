@@ -3,12 +3,12 @@ import './App.css'
 import store from './redux/redux-store'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import Header from '../src/Header/Header'
-import NavbarContainer from './Navbar/NavbarContainer'
-import IssueContainer from './Issue/IssueContainer'
-import IssuesListContainer from './IssuesList/IssuesListContainer'
-import IssueCondition from './IssueCondition/IssueCondition'
-import IssueCreatorContainer from './IssueCreator/IssueCreatorContainer'
+import Header from './component/Header/Header'
+import NavbarContainer from './component/Navbar/NavbarContainer'
+import IssueContainer from './component/Issue/IssueContainer'
+import IssuesListContainer from './component/IssuesList/IssuesListContainer'
+import IssueCondition from './component/IssueCondition/IssueCondition'
+import IssueCreatorContainer from './component/IssueCreator/IssueCreatorContainer'
 
 function App() {
     return (

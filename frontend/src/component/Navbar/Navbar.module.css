@@ -1,10 +1,8 @@
 .Navbar {
     grid-area: n;
-    background-color: #6a6a6a;
+    background: #6a6a6a;
     color: white;
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 50px 20px 0 20px;
 }
 .Navbar select{
     width: 250px;

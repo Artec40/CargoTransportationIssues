@@ -1,14 +1,17 @@
 import { issuesAPI } from '../api'
-
-const SET_ISSUES = 'SET_ISSUES'
-const SET_CURRENT_ISSUE = 'SET_CURRENT_ISSUE'
-const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
-const TOGGLE_IS_CREATE_MODE = 'TOGGLE_IS_CREATE_MODE'
-const SET_FILTER_DATA = 'SET_FILTER_DATA'
-const SET_COMPANY_FILTER = 'SET_COMPANY_FILTER'
-const SET_CARRIER_FILTER = 'SET_CARRIER_FILTER'
-const SET_ATI_CODE_FILTER = 'SET_ATI_CODE_FILTER'
-const SET_REQUIRED_ISSUE = 'SET_REQUIRED_ISSUE'
+import {
+    SET_ATI_CODE_FILTER,
+    SET_CARRIER_FILTER,
+    SET_COMPANY_FILTER,
+    SET_CURRENT_ISSUE, SET_FILTER_DATA,
+    SET_ISSUES, SET_REQUIRED_ISSUE,
+    TOGGLE_IS_CREATE_MODE,
+    TOGGLE_IS_FETCHING,
+    setCurrentIssue,
+    setFilterData,
+    setIssues,
+    toggleIsFetching
+} from './issues-action'
 
 let initialState = {
     issues: [],
@@ -82,34 +85,6 @@ const issuesReducer = (state = initialState, action) => {
             return state
     }
 }
-
-export const setIssues = (issues) => ({
-    type: SET_ISSUES, issues
-})
-export const setCompanyFilter = (company) => ({
-    type: SET_COMPANY_FILTER, company
-})
-export const setCarrierFilter = (carrier) => ({
-    type: SET_CARRIER_FILTER, carrier
-})
-export const setATICodeFilter = (ATICode) => ({
-    type: SET_ATI_CODE_FILTER, ATICode
-})
-export const setRequiredIssue = (requiredIssue) => ({
-    type: SET_ATI_CODE_FILTER, requiredIssue
-})
-export const setCurrentIssue = (currentIssue) => ({
-    type: SET_CURRENT_ISSUE, currentIssue
-})
-export const toggleIsFetching = (isFetching) => ({
-    type: TOGGLE_IS_FETCHING, isFetching
-})
-export const toggleIsCreateMode = (isCreateMode) => ({
-    type: TOGGLE_IS_CREATE_MODE, isCreateMode
-})
-export const setFilterData = (companies, carriers, ATIcodes) => ({
-    type: SET_FILTER_DATA, filterData:{companies, carriers, ATIcodes}
-})
 
 export const getIssues = () => async (dispatch) => {
     dispatch(toggleIsFetching(true))

@@ -1,14 +1,12 @@
 import React from 'react'
 import IssueCreator from './IssueCreator'
-import {
-    createIssue,
-    toggleIsCreateMode
-} from '../../src/redux/issues-reducer'
+import { createIssue } from '../../redux/issues-reducer'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
-import Preloader from '../../src/Preloader/Preloader'
-import { getIsFetching } from '../../src/redux/issues-selector'
+import Preloader from '../Preloader/Preloader'
+import { getIsFetching } from '../../redux/issues-selector'
+import { toggleIsCreateMode } from '../../redux/issues-action'
 
 class IssueCreatorContainer extends React.Component {
     render() {

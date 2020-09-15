@@ -1,6 +1,6 @@
 .Header {
     grid-area: h;
-    background-color: #545454;
+    background: #545454;
     color: white;
     font-size: 48px;
     text-align: center;

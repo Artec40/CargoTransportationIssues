@@ -3,17 +3,19 @@ import Navbar from './Navbar'
 import { connect } from 'react-redux'
 import {
     getIssuesByFilter,
-    setCompanyFilter,
-    setCarrierFilter,
-    setATICodeFilter,
-    setRequiredIssue,
     getIssuesBySearch,
     getFilterData
-} from '../../src/redux/issues-reducer'
-import { getAllATICodes, getAllCarriers, getAllCompanies} from '../../src/redux/issues-selector'
-import Preloader from '../../src/Preloader/Preloader'
+} from '../../redux/issues-reducer'
+import { getAllATICodes, getAllCarriers, getAllCompanies } from '../../redux/issues-selector'
+import Preloader from '../Preloader/Preloader'
+import { setCompanyFilter } from '../../redux/issues-action'
+import { setATICodeFilter, setCarrierFilter, setRequiredIssue } from '../../redux/issues-action'
 
 class NavbarContainer extends React.Component {
+
+    componentDidMount() {
+        this.props.getFilterData()
+    }
 
     render() {
         return <>
