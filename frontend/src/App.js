@@ -9,6 +9,7 @@ import IssueContainer from './component/Issue/IssueContainer'
 import IssuesListContainer from './component/IssuesList/IssuesListContainer'
 import IssueCondition from './component/IssueCondition/IssueCondition'
 import IssueCreatorContainer from './component/IssueCreator/IssueCreatorContainer'
+import "@fontsource/roboto"
 
 function App() {
     return (
