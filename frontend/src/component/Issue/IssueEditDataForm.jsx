@@ -1,11 +1,17 @@
 import React from 'react'
 import s from './Issue.module.css'
-import { Field, handleSubmit, reduxForm } from 'redux-form'
-
-const IssueEditDataForm = ({handleSubmit}) => {
+import { Field, reduxForm } from 'redux-form'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import SaveIcon from '@material-ui/icons/Save'
+//todo настроить форму, работающую с materiaLUI
+const IssueEditDataForm = ({handleSubmit, initialValues}) => {
     return (
         <form className={s.Issue} onSubmit={handleSubmit}>
-            <div className={s.description}>Дата и время получения заявки от клиента:</div>
+            <TextField className={s.value}
+                       color={'secondary'}
+                       label={'Дата и время получения заявки от клиента'}
+                       value={initialValues? initialValues.date : ''}/>
             <Field className={s.value} name={'date'} component={'input'}/>
             <div className={s.description}>Название фирмы клиента:</div>
             <Field className={s.value} name={'company'} component={'input'}/>
@@ -18,7 +24,8 @@ const IssueEditDataForm = ({handleSubmit}) => {
             <div className={s.description}>ATI код перевозчика:</div>
             <Field className={s.value} name={'ATICode'} component={'input'}/>
             <div>
-                <button>Сохранить заявку</button>
+                <button>sd</button>
+                <Button endIcon={<SaveIcon/>} variant={'contained'} size={'small'}>Сохранить заявку</Button>
             </div>
         </form>
     )

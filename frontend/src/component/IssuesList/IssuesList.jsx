@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './IssuesList.module.css'
 import { NavLink } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
 
 const IssuesList = ({issues, isCreateMode, toggleIsCreateMode}) => {
 
@@ -13,7 +14,12 @@ const IssuesList = ({issues, isCreateMode, toggleIsCreateMode}) => {
             {
                 !isCreateMode &&
                 <NavLink to={'/create'}>
-                    <button onClick={() => {toggleIsCreateMode(true)}}>Создать</button>
+                    <Button onClick={() => {toggleIsCreateMode(true)}}
+                            variant={'contained'}
+                            size={'small'}
+                            className={s.buttonLink}>
+                        Создать
+                    </Button>
                 </NavLink>
             }
         </div>

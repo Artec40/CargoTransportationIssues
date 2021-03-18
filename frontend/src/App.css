@@ -1,6 +1,7 @@
 :root {
     font-size: calc(0.5em + 0.7vw);
     --main-font: Roboto, sans-serif;
+    --dark-color: #000;
     --dark-gray-color: #545454;
     --light-gray-color: #6a6a6a;
     --white-color: #fff;
@@ -8,6 +9,10 @@
 
 body {
     font-family: var(--main-font);
+}
+
+a {
+    text-decoration: none;
 }
 
 .app-wrapper {

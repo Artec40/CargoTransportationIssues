@@ -1,6 +1,10 @@
 import React from 'react'
 import s from './Issue.module.css'
 import { NavLink } from 'react-router-dom'
+import ButtonGroup from '@material-ui/core/ButtonGroup'
+import Button from '@material-ui/core/Button'
+import DeleteIcon from '@material-ui/icons/Delete'
+import EditIcon from '@material-ui/icons/Edit'
 
 const IssueData = ({id, issueData, deleteCurrentIssue, startEditMode}) => {
     return (
@@ -20,10 +24,20 @@ const IssueData = ({id, issueData, deleteCurrentIssue, startEditMode}) => {
                 <div className={s.value}>{issueData.ATICode}</div>
             </a>
             <div>
-                <button onClick={() => {startEditMode()}}>Редактировать</button>
-                <NavLink to={''}>
-                    <button onClick={() => {deleteCurrentIssue(id)}}>Удалить</button>
-                </NavLink>
+                <ButtonGroup variant={'contained'}
+                             size={'small'}
+                             color={'default'}>
+                    <Button onClick={() => {startEditMode()}}
+                            endIcon={<EditIcon/>}>
+                        Редактировать
+                    </Button>
+                    <Button onClick={() => {deleteCurrentIssue(id)}}
+                            endIcon={<DeleteIcon/>}>
+                        <NavLink to={''} className={s.navlink}>
+                            Удалить
+                        </NavLink>
+                    </Button>
+                </ButtonGroup>
             </div>
         </div>
     )
