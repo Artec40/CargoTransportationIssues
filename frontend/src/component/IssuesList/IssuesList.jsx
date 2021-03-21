@@ -2,9 +2,17 @@ import React from 'react'
 import s from './IssuesList.module.css'
 import { NavLink } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles({
+    button: {
+        marginTop: '2em',
+        width: '25em'
+    }
+})
 
 const IssuesList = ({issues, isCreateMode, toggleIsCreateMode}) => {
-
+    const classes = useStyles()
     let issuesId = issues.map(issue => <div><NavLink to={'/issue/' + issue.id}>{issue.id}</NavLink></div>)
 
     return (
@@ -17,7 +25,7 @@ const IssuesList = ({issues, isCreateMode, toggleIsCreateMode}) => {
                     <Button onClick={() => {toggleIsCreateMode(true)}}
                             variant={'contained'}
                             size={'small'}
-                            className={s.buttonLink}>
+                            className={classes.button}>
                         Создать
                     </Button>
                 </NavLink>

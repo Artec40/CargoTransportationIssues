@@ -1,5 +1,17 @@
 import React from 'react'
+import Select from '@material-ui/core/Select'
+import Button from '@material-ui/core/Button'
+import MenuItem from '@material-ui/core/MenuItem'
+import InputLabel from '@material-ui/core/InputLabel'
+import { makeStyles } from '@material-ui/core/styles'
 
+const useStyles = makeStyles({
+    navbarMUIElementsStyles: {
+        color: 'white',
+        marginTop: '1vw',
+        width: '100%'
+    }
+})
 
 const FilterIssueForm = ({
                              companies, carriers, ATICodes, getIssuesByFilter,
@@ -7,9 +19,11 @@ const FilterIssueForm = ({
                              carrierFilter, setATICodeFilter, ATICodeFilter
                          }) => {
 
-    let companiesOptions = companies.map(company => <option value={company}>{company}</option>)
-    let carriersOptions = carriers.map(carrier => <option value={carrier}>{carrier}</option>)
-    let ATICodesOptions = ATICodes.map(ATIcode => <option value={ATIcode}>{ATIcode}</option>)
+    const classes = useStyles()
+
+    let companiesOptions = companies.map(company => <MenuItem value={company}>{company}</MenuItem>)
+    let carriersOptions = carriers.map(carrier => <MenuItem value={carrier}>{carrier}</MenuItem>)
+    let ATICodesOptions = ATICodes.map(ATIcode => <MenuItem value={ATIcode}>{ATIcode}</MenuItem>)
 
     const startFilterIssues = () => {
         getIssuesByFilter(encodeURI(companyFilter), encodeURI(carrierFilter), encodeURI(ATICodeFilter))
@@ -19,43 +33,46 @@ const FilterIssueForm = ({
         <div>
             <div><b>Фильтр заявок</b></div>
             <div>
-                по фирме:
-            </div>
-            <div>
-                <select defaultValue={companyFilter}
+                <InputLabel className={classes.navbarMUIElementsStyles} id={'companyFilter'}>по фирме</InputLabel>
+                <Select className={classes.navbarMUIElementsStyles}
+                        defaultValue={companyFilter}
+                        id={'companyFilter'}
+                        color={'secondary'}
                         onChange={(e) => {
                             setCompanyFilter(e.target.value)
                         }}>
-                    <option value={''}>Выберите значение</option>
+                    <MenuItem value={''}>Выберите значение</MenuItem>
                     {companiesOptions}
-                </select>
+                </Select>
             </div>
             <div>
-                по перевозчику:
-            </div>
-            <div>
-                <select defaultValue={carrierFilter}
+                <InputLabel className={classes.navbarMUIElementsStyles} id={'carrierFilter'}>по перевозчику</InputLabel>
+                <Select className={classes.navbarMUIElementsStyles}
+                        defaultValue={carrierFilter}
+                        id={'carrierFilter'}
+                        color={'secondary'}
                         onChange={(e) => {
                             setCarrierFilter(e.target.value)
                         }}>
-                    <option value={''}>Выберите значение</option>
+                    <MenuItem value={''}>Выберите значение</MenuItem>
                     {carriersOptions}
-                </select>
+                </Select>
             </div>
             <div>
-                по ATI коду:
-            </div>
-            <div>
-                <select defaultValue={ATICodeFilter}
+                <InputLabel className={classes.navbarMUIElementsStyles} id={'ATICodeFilter'}>по перевозчику</InputLabel>
+                <Select className={classes.navbarMUIElementsStyles}
+                        defaultValue={ATICodeFilter}
+                        id={'ATICodeFilter'}
+                        color={'secondary'}
                         onChange={(e) => {
                             setATICodeFilter(e.target.value)
                         }}>
-                    <option value={''}>Выберите значение</option>
+                    <MenuItem value={''}>Выберите значение</MenuItem>
                     {ATICodesOptions}
-                </select>
+                </Select>
             </div>
-            <button onClick={startFilterIssues}>Поиск по фильтру
-            </button>
+            <Button className={classes.navbarMUIElementsStyles} variant="outlined" onClick={startFilterIssues}>Поиск по
+                фильтру</Button>
         </div>
     )
 }
