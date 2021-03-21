@@ -12,7 +12,6 @@ import { compose } from 'redux'
 import Preloader from '../Preloader/Preloader'
 import { toggleIsCreateMode } from '../../redux/issues-action'
 
-
 class IssueContainer extends React.Component {
 
     refreshIssue() {

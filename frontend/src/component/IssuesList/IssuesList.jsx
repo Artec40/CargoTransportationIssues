@@ -7,17 +7,17 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
     button: {
         marginTop: '2em',
-        width: '25em'
+        width: '50%'
     }
 })
 
 const IssuesList = ({issues, isCreateMode, toggleIsCreateMode}) => {
     const classes = useStyles()
-    let issuesId = issues.map(issue => <div><NavLink to={'/issue/' + issue.id}>{issue.id}</NavLink></div>)
+    let issuesId = issues.map(issue => <div key={issues.indexOf(issue)}><NavLink to={'/issue/' + issue.id}>{issue.id}</NavLink></div>)
 
     return (
         <div className={s.IssuesList}>
-            <h1>Номера заявок: </h1>
+            <h2>Номера заявок: </h2>
             {issuesId}
             {
                 !isCreateMode &&

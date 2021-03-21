@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
     textField: {
         marginBottom: '2em',
-        width: '25em'
+        width: '80%'
     }
 })
 const renderTextField = ({input, label, meta: {touched, error}, custom, description, styles}) => (

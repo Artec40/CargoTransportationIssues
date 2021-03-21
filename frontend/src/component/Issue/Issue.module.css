@@ -1,6 +1,6 @@
 .Issue {
     grid-area: i;
-    padding-top: 50px;
+    padding-top: 3em;
     text-align: left;
 }
 
@@ -10,7 +10,7 @@
 
 .value {
     margin-bottom: 2em;
-    width: 25em;
+    width: 80%;
 }
 
 .navlink {

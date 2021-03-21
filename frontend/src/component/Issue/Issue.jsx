@@ -15,7 +15,7 @@ const Issue = ({id, issueData, deleteCurrentIssue, saveCurrentIssue}) => {
 
     return (
         <div className={s.Issue}>
-            <h1>Заявка №{id}</h1>
+            <h2>Заявка №{id}</h2>
             {
                 editMode
                     ? <IssueEditDataForm initialValues={issueData} onSubmit={onEditSubmit}/>

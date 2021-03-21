@@ -21,9 +21,9 @@ const FilterIssueForm = ({
 
     const classes = useStyles()
 
-    let companiesOptions = companies.map(company => <MenuItem value={company}>{company}</MenuItem>)
-    let carriersOptions = carriers.map(carrier => <MenuItem value={carrier}>{carrier}</MenuItem>)
-    let ATICodesOptions = ATICodes.map(ATIcode => <MenuItem value={ATIcode}>{ATIcode}</MenuItem>)
+    let companiesOptions = companies.map(company => <MenuItem key={companies.indexOf(company)} value={company}>{company}</MenuItem>)
+    let carriersOptions = carriers.map(carrier => <MenuItem key={carriers.indexOf(carrier)} value={carrier}>{carrier}</MenuItem>)
+    let ATICodesOptions = ATICodes.map(ATIcode => <MenuItem key={ATICodes.indexOf(ATIcode)} value={ATIcode}>{ATIcode}</MenuItem>)
 
     const startFilterIssues = () => {
         getIssuesByFilter(encodeURI(companyFilter), encodeURI(carrierFilter), encodeURI(ATICodeFilter))

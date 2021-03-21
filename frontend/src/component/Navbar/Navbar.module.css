@@ -1,20 +1,10 @@
 .Navbar {
     grid-area: n;
-    background: #6a6a6a;
+    background: var(--light-gray-color);
     color: white;
-    padding: 50px 20px 0 20px;
-}
-.Navbar select{
-    width: 250px;
+    padding: 2em 1em 0 1em;
 }
 
-.Navbar button{
-    width:250px;
-}
-
-.Navbar input{
-    width:242px;
-}
 .SearchIssueForm{
-    margin-top:100px;
+    margin-top:5em;
 }
